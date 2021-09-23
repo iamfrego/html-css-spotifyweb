@@ -4,26 +4,64 @@
     padding: 0;
 }
 
-.debug {
-    background-color: #141922;
-    height: 1000px;
+.body {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.debug .site_header {
-    height: 100px;
-    background-color: #080B12;
+.clearfix {
+    display: table;
+    content: "";
+    clear: both;
 }
 
-.debug .menu {
+.flex {
+    display: flex;
+}
+
+/* DEBUG******************************************************************* */
+
+.debug aside {
     background-color: black;
-    height: calc(100vh - 100px);
+}
+
+.debug .song_selection {
+    height: calc(100vh - 15vh);
 }
 
 .debug .song_control {
-    height: 100px;
     background-color: #282828;
 }
 
-.menu {
-    width: 20%;
+.debug .upgrade {
+    background-color: #080B12;
+}
+
+/* navbar*********************************************************************/
+
+aside, .song_selection, .song_control {
+    float: left;
+}
+
+aside {
+    width: 15vw;
+    height: calc(100vh - 15vh);
+}
+
+/* main********************************************************************** */
+
+.song_selection {
+    width: calc(100vw - 15vw);
+    background-color: #141922;
+}
+
+.song_selection .upgrade {
+    width: calc(100vw - 15vw);
+    height: 10vh;
+}
+
+/* footer******************************************************************/
+
+.song_control {
+    width: 100vw;
+    height: 15vh;
 }
