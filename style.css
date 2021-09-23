@@ -28,7 +28,8 @@
 } */
 
 .debug .song_selection {
-    height: calc(100vh - 15vh);
+    height: /*calc(100vh - 15vh); */
+    10000px
 }
 
 .debug .song_control {
@@ -46,6 +47,7 @@ aside, .song_selection, .song_control {
 aside {
     width: 15vw;
     background-color: black;
+    flex-direction: column;
 }
 
 .logo {
@@ -58,6 +60,7 @@ aside {
 .menu>div {
     padding-left: 2rem;
     margin-bottom: 0.7rem;
+    display: block;
 }
 
 .menu img {
