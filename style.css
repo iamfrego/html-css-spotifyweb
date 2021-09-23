@@ -22,18 +22,16 @@
     height: 15vh;
 } */
 
-/* .debug aside {
-    background-color: black;
-    height: calc(100vh - 15vh);
-} */
+.debug aside {
+    height: calc(100vh - 10vh);
+}
 
 .debug .song_selection {
-    height: /*calc(100vh - 15vh); */
-    10000px
+    height: calc(100vh - 10vh);
 }
 
 .debug .song_control {
-    height: 15vh;
+    height: 10vh;
 }
 
 /* GENERAL ******************************************************************/
@@ -48,19 +46,18 @@ aside {
     width: 15vw;
     background-color: black;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .logo {
     width: 150px;
-    margin: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 /* menu */
 
 .menu>div {
-    padding-left: 2rem;
     margin-bottom: 0.7rem;
-    display: block;
 }
 
 .menu img {
@@ -76,11 +73,6 @@ aside {
 
 /* playlist */
 
-.container {
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .container>div {
     padding-left: 2rem;
     margin-bottom: 0.7rem;
@@ -92,30 +84,22 @@ aside {
 
 .playlist h4 {
     color: white;
-    padding-bottom: 1.5rem;
-}
-
-.playlist i {
-    transform: scale(3);
-    position: relative;
-    left: 15px;
-    margin-bottom: 2.5rem;
-}
-
-.playlist>p {
-    position: relative;
-    display: inline-block;
-    left: 35px;
 }
 
 .playlist>div {
-    padding: 0.5rem;
+    padding: 0.5rem 0rem;
+}
+
+.plus p {
+    display: inline-block;
+    vertical-align: super;
 }
 
 /* user */
 
 .user {
     padding: 0 2rem;
+    flex-direction: column;
 }
 
 .app {
@@ -127,9 +111,10 @@ aside {
     width: 15px;
 }
 
-.app p {
+.app p, .profile p {
     font-size: small;
     vertical-align: top;
+    display: inline-block;
 }
 
 .profile {
@@ -165,6 +150,7 @@ button {
 .song_selection {
     width: calc(100vw - 15vw);
     background-color: #141922;
+    overflow: auto;
 }
 
 /* footer******************************************************************/
