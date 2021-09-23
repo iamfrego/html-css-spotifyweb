@@ -23,15 +23,15 @@
 } */
 
 .debug aside {
-    height: calc(100vh - 10vh);
+    height: calc(100vh - 90px);
 }
 
 .debug .song_selection {
-    height: calc(100vh - 10vh);
+    height: calc(100vh - 90px);
 }
 
 .debug .song_control {
-    height: 10vh;
+    height: 90px;
 }
 
 /* GENERAL ******************************************************************/
@@ -158,4 +158,33 @@ button {
 .song_control {
     width: 100vw;
     background-color: #282828;
+}
+
+.center {
+    align-self: center;
+}
+
+.song_thumbnail {
+    justify-content: start;
+}
+
+.song_thumbnail img {
+    width: 50px;
+    margin: 20px
+}
+
+.current_title, .current_artist {
+    font-size: small;
+}
+
+.current_title {
+    color: white;
+}
+
+.like_save {
+    margin: 0 2rem;
+}
+
+.fa-heart {
+    margin: 0.5rem;
 }
