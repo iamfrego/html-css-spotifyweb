@@ -5,6 +5,25 @@
 }
 
 .debug {
-    background-color: black;
+    background-color: #141922;
     height: 1000px;
+}
+
+.debug .site_header {
+    height: 100px;
+    background-color: #080B12;
+}
+
+.debug .menu {
+    background-color: black;
+    height: calc(100vh - 100px);
+}
+
+.debug .song_control {
+    height: 100px;
+    background-color: #282828;
+}
+
+.menu {
+    width: 20%;
 }
