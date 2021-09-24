@@ -189,6 +189,24 @@ button {
     overflow-x: hidden;
 }
 
+.imgwrap {
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    background-color: #000000c9;
+    font-size: 100%;
+    visibility: hidden;
+}
+
 /* Catergory */
 
 .category_row {
@@ -310,8 +328,9 @@ button {
 }
 
 .control i {
+    transform: scale(1.3);
     color: white;
-    margin: .5rem;
+    margin: 1rem .5rem;
 }
 
 /* Song line */
@@ -373,11 +392,26 @@ button {
     border: white solid 2px;
 }
 
+/* song_selection */
+
+.category_row :hover {
+    color: white;
+}
+
+.imgwrap:hover .overlay {
+    visibility: visible;
+}
+
 /* footer */
 
 .current_song_title .current_artist:hover {
     color: white;
     text-decoration: underline;
+}
+
+.song_details i:hover {
+    color: white;
+    transform: scale(1.5);
 }
 
 .song_line:hover .song_bar, .song:hover .song_btn {
