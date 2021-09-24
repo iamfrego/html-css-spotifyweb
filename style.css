@@ -6,7 +6,7 @@
     color: #A3A3A3;
 }
 
-.clearfix {
+.clearfix::after {
     display: table;
     content: "";
     clear: both;
@@ -30,20 +30,25 @@
     height: calc(100vh - 90px);
 }
 
-.debug .song_control {
+/* .debug .song_details {
     height: 90px;
-}
+} */
 
 /* GENERAL ******************************************************************/
 
-aside, .song_selection, .song_control {
+body {
+    overflow-y: auto;
+    overflow: hidden;
+}
+
+aside, .song_selection, .song_details {
     float: left;
 }
 
 /* navbar*********************************************************************/
 
 aside {
-    width: 15vw;
+    width: 250px;
     background-color: black;
     flex-direction: column;
     justify-content: space-between;
@@ -132,7 +137,7 @@ aside {
 /* header*********************************************************************/
 
 .upgrade {
-    width: calc(100vw - 15vw);
+    width: calc(100vw - 250px);
     justify-content: end;
     background-color: #080B12;
     position: fixed;
@@ -148,16 +153,17 @@ button {
 }
 
 .song_selection {
-    width: calc(100vw - 15vw);
+    width: auto;
     background-color: #141922;
     overflow: auto;
 }
 
 /* footer******************************************************************/
 
-.song_control {
+.song_details {
     width: 100vw;
     background-color: #282828;
+    justify-content: space-between;
 }
 
 .center {
@@ -181,10 +187,96 @@ button {
     color: white;
 }
 
+/* /.thumbnail */
+
 .like_save {
     margin: 0 2rem;
 }
 
 .fa-heart {
     margin: 0.5rem;
+}
+
+/* /.like_save */
+
+.song_control {
+    width: 500px;
+}
+
+.control {
+    justify-content: center;
+}
+
+.control i {
+    color: white;
+}
+
+.control i {
+    margin: .5rem;
+}
+
+/* /.control icon */
+
+.song {
+    width: 80%;
+    height: 5px;
+    background-color: #5A5A5A;
+    border-radius: 1rem;
+    margin: 0 1.5rem;
+}
+
+.song_moment {
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+.song_bar {
+    width: 90%;
+    height: 100%;
+    background-color: white;
+    border-radius: 1rem 0rem 0rem 1rem;
+    visibility: hidden;
+}
+
+.song_btn {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.volume_icon i {
+    padding: 0 .5rem;
+    display: inline-block;
+}
+
+.volume_bar {
+    display: inline-block;
+    width: 100px;
+    height: 5px;
+    background-color: #5A5A5A;
+    border-radius: 1rem;
+    margin: 0 1.5rem;
+}
+
+.volume_level {
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    border-radius: 1rem 0rem 0rem 1rem;
+    visibility: hidden;
+}
+
+/* ANIMATION */
+
+.song:hover .song_bar, .song:hover .song_btn {
+    visibility: visible;
+}
+
+.volume_bar:hover {
+    visibility: visible;
 }
