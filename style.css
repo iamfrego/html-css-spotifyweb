@@ -22,9 +22,9 @@
     height: 15vh;
 } */
 
-.debug aside {
+/* .debug aside {
     height: calc(100vh - 90px);
-}
+} */
 
 .debug .song_selection {
     height: calc(100vh - 90px);
@@ -48,6 +48,7 @@ aside, .song_selection, .song_details {
 /* navbar*********************************************************************/
 
 aside {
+    height: calc(100vh - 90px);
     width: 250px;
     background-color: black;
     flex-direction: column;
@@ -140,7 +141,7 @@ aside {
     width: calc(100vw - 250px);
     justify-content: end;
     background-color: #080B12;
-    position: fixed;
+    display: block;
 }
 
 button {
@@ -152,8 +153,11 @@ button {
     margin: 1rem;
 }
 
+/* ./upgrade */
+
 .song_selection {
-    width: auto;
+    height: calc(100vh - 90px);
+    width: calc(100%-250px);
     background-color: #141922;
     overflow: auto;
 }
