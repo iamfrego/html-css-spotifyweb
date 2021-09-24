@@ -16,6 +16,14 @@
     display: flex;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
 /* DEBUG******************************************************************* */
 
 /* .debug .upgrade {
@@ -30,6 +38,11 @@
     height: calc(100vh - 90px);
 }
 
+/* .debug .row {
+    height: 500px;
+    background-color: tomato;
+} */
+
 /* .debug .song_details {
     height: 90px;
 } */
@@ -37,7 +50,7 @@
 /* GENERAL ******************************************************************/
 
 body {
-    overflow-y: auto;
+    overflow: auto;
     overflow: hidden;
 }
 
@@ -53,6 +66,7 @@ aside {
     background-color: black;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .logo {
@@ -92,8 +106,18 @@ aside {
     color: white;
 }
 
-.playlist>div {
-    padding: 0.5rem 0rem;
+.playlist ul {
+    min-height: calc(100vh - 98vh);
+    max-height: calc(100vh - 75vh);
+    overflow-y: auto;
+}
+
+.playlist ul li {
+    padding: 1rem 0rem;
+}
+
+.plus {
+    margin: 1rem 0rem;
 }
 
 .plus p {
@@ -106,6 +130,7 @@ aside {
 .user {
     padding: 0 2rem;
     flex-direction: column;
+    z-index: 2;
 }
 
 .app {
@@ -137,11 +162,12 @@ aside {
 
 /* header*********************************************************************/
 
+/* upgrade */
+
 .upgrade {
     width: calc(100vw - 250px);
-    justify-content: end;
+    justify-content: flex-end;
     background-color: #080B12;
-    display: block;
 }
 
 button {
@@ -150,16 +176,86 @@ button {
     color: #A3A3A3;
     border: #A3A3A3 solid 1px;
     border-radius: 30px;
-    margin: 1rem;
+    margin: 1rem 2rem;
 }
 
-/* ./upgrade */
+/* song selection GENERAL */
 
 .song_selection {
-    height: calc(100vh - 90px);
-    width: calc(100%-250px);
+    /* height: calc(100vh - 90px); */
+    width: calc(100% - 250px);
     background-color: #141922;
     overflow: auto;
+    overflow-x: hidden;
+}
+
+/* Catergory */
+
+.category_row {
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.category_row ul li {
+    margin-right: 1rem;
+}
+
+/* Section Division */
+
+.main_section {
+    margin-left: 2rem;
+}
+
+.main_section p {
+    font-size: small;
+}
+
+.section_title {
+    margin: 1rem 0;
+    color: white;
+}
+
+/* "ARRAY ROW" */
+
+.row {
+    margin: 2rem 2rem;
+    justify-content: space-between;
+}
+
+.row:first-child {
+    margin-left: 2rem;
+}
+
+.short {
+    width: 30%;
+}
+
+.song_info {
+    text-align: center;
+    width: 90%
+}
+
+.song_info img {
+    width: 100%;
+}
+
+.artist_info {
+    text-align: center;
+    width: 90%
+}
+
+.artist_info img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.title {
+    margin-top: 1rem;
+    color: white;
+}
+
+.song_info .artist {
+    margin-top: 1rem;
 }
 
 /* footer******************************************************************/
@@ -173,6 +269,8 @@ button {
 .center {
     align-self: center;
 }
+
+/* thumbnail */
 
 .song_thumbnail {
     justify-content: start;
@@ -191,7 +289,7 @@ button {
     color: white;
 }
 
-/* /.thumbnail */
+/* like_save */
 
 .like_save {
     margin: 0 2rem;
@@ -201,11 +299,11 @@ button {
     margin: 0.5rem;
 }
 
-/* /.like_save */
-
 .song_control {
     width: 500px;
 }
+
+/* control icon */
 
 .control {
     justify-content: center;
@@ -213,15 +311,12 @@ button {
 
 .control i {
     color: white;
-}
-
-.control i {
     margin: .5rem;
 }
 
-/* /.control icon */
+/* Song line */
 
-.song {
+.song_line {
     width: 80%;
     height: 5px;
     background-color: #5A5A5A;
@@ -240,18 +335,9 @@ button {
     height: 100%;
     background-color: white;
     border-radius: 1rem 0rem 0rem 1rem;
-    visibility: hidden;
 }
 
-.song_btn {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    position: relative;
-    cursor: pointer;
-    visibility: hidden;
-}
+/* Volume */
 
 .volume_icon i {
     padding: 0 .5rem;
@@ -272,15 +358,32 @@ button {
     height: 100%;
     background-color: white;
     border-radius: 1rem 0rem 0rem 1rem;
-    visibility: hidden;
 }
 
-/* ANIMATION */
+/* ANIMATION *****************************************************************/
 
-.song:hover .song_bar, .song:hover .song_btn {
+/* aside */
+
+.home :hover, .search :hover, .library :hover, .plus :hover, .playlist ul>li:hover, .app :hover {
+    color: white;
+}
+
+.upgrade :hover {
+    color: white;
+    border: white solid 2px;
+}
+
+/* footer */
+
+.current_song_title .current_artist :hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.song_line:hover .song_bar, .song:hover .song_btn {
     visibility: visible;
 }
 
-.volume_bar:hover {
+.volume_bar:hover .volume_level {
     visibility: visible;
 }
