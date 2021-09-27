@@ -452,14 +452,22 @@ button {
         margin: 1rem;
         justify-content: center;
     }
+    h1+p {
+        margin-bottom: 1rem;
+    }
     .row {
         flex-wrap: wrap;
         margin: 0;
         justify-content: unset;
     }
+    .short {
+        width: 100%;
+    }
     .song {
-        width: 160px;
         margin-right: 1rem;
+    }
+    .song_info {
+        margin-bottom: 1rem;
     }
     .like_save {
         margin: 0 1rem;
@@ -477,11 +485,18 @@ button {
     .row {
         flex-wrap: wrap;
     }
-    .song {
+    .song, .artist {
         width: 200px;
+    }
+    .short {
+        width: 100%;
     }
     .like_save {
         margin: 0 1rem;
+    }
+    .control i {
+        transform: scale(1);
+        margin: 1rem .5rem;
     }
     .volume_bar {
         width: 50px;
@@ -499,8 +514,14 @@ button {
     .logo_small {
         display: block;
     }
-    .menu p, .playlist, .user {
+    .menu p, .playlist, .user p {
         display: none;
+    }
+    .user img {
+        width: 30px;
+    }
+    .app {
+        border: none;
     }
     .song_selection {
         width: calc(100vw - 60px);
@@ -510,7 +531,7 @@ button {
         font-size: smaller;
         justify-content: space-around;
     }
-    .song {
+    .artist, .song {
         width: 125px;
     }
     .current {
@@ -523,10 +544,10 @@ button {
         display: none;
     }
     .control i {
-        transform: scale(1);
         margin: 1rem .5rem;
+        transform: scale( 1.5);
     }
-    .volume_icon :first-child, .volume_icon :first-child+i {
+    .volume_icon :first-child, .volume_icon :first-child+i, .volume_bar {
         display: none;
     }
 }
