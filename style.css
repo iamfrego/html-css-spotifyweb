@@ -50,7 +50,6 @@ ul {
 /* GENERAL ******************************************************************/
 
 body {
-    overflow: auto;
     overflow: hidden;
 }
 
@@ -61,11 +60,12 @@ aside, .song_selection, .song_details {
 /* navbar*********************************************************************/
 
 aside {
+    padding-left: 2rem;
     height: calc(100vh - 90px);
     width: 250px;
     background-color: black;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     overflow: hidden;
 }
 
@@ -135,9 +135,9 @@ aside {
 /* user */
 
 .user {
-    padding: 0 2rem;
+    margin-top: auto;
     flex-direction: column;
-    z-index: 2;
+    z-index: 1;
 }
 
 .app {
@@ -346,9 +346,9 @@ button {
 }
 
 .control i {
-    transform: scale(1.3);
+    transform: scale(1.4);
     color: white;
-    margin: 1rem .5rem;
+    margin: 1rem 2rem;
 }
 
 /* Song line */
@@ -491,9 +491,7 @@ button {
 @media screen and (max-width:425px) {
     aside {
         width: 60px;
-    }
-    .container>div {
-        padding: 0rem 1rem;
+        padding-left: 1rem;
     }
     .big_logo {
         display: none;
@@ -518,8 +516,15 @@ button {
     .current {
         flex-shrink: 1;
     }
+    .current_song_title {
+        display: none;
+    }
     .like_save {
         display: none;
+    }
+    .control i {
+        transform: scale(1);
+        margin: 1rem .5rem;
     }
     .volume_icon :first-child, .volume_icon :first-child+i {
         display: none;
